@@ -1,0 +1,69 @@
+.hideButt {
+  visibility: hidden;
+  display: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.showRegLogButt {
+  background-color: rgba($color: #56c3ee, $alpha: 1);
+  color: white;
+  outline: none;
+  border-style: none;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+  cursor: pointer;
+}
+.Logicon {
+  width: 500px;
+  height: 500px;
+  margin-top: -50px;
+  margin-left: 45%;
+
+  position: absolute;
+}
+.LogRegdiv {
+  margin-top: 130px;
+  margin-left: 50px;
+}
+.HReg {
+  margin-left: 25%;
+}
+.RegPlace {
+  display: grid;
+
+  width: 25%;
+  font-size: 80%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.inputsreg {
+  outline: none;
+  border-style: none;
+  border-radius: 20px;
+
+  padding: 6px;
+  background-color: rgba($color: #f3f3f3, $alpha: 1);
+}
+@media screen and (max-width: 600px) {
+  .Logicon {
+    width: 300px;
+    height: 300px;
+    margin-top: 550px;
+    margin-left: 20%;
+  }
+  .RegPlace {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .Logicon {
+    width: 200px;
+    height: 200px;
+    margin-top: 500px;
+    margin-left: 20%;
+  }
+}

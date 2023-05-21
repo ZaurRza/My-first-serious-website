@@ -1,0 +1,69 @@
+.articles {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.divarticles {
+  color: black;
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  transform: translateX(20px);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  width: 16rem;
+  transition: 200ms;
+  cursor: pointer;
+}
+.divarticles:hover {
+  scale: 1.07;
+  transition: 200ms;
+}
+.articlesitem {
+  border-radius: 5px;
+  width: 16rem;
+  height: 9rem;
+  background-color: rgb(255, 255, 255);
+}
+.articlesimg {
+  border-radius: 5px;
+  width: 16rem;
+  height: 9rem;
+  object-fit: cover;
+}
+.hidearticle {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+}
+.popular {
+  background-color: rgba($color: #5992c8, $alpha: 1);
+  color: white;
+  border-radius: 20px;
+  border-style: none;
+  margin-left: 60px;
+  margin-top: 20px;
+
+  padding: 3px 15px 3px 15px;
+  cursor: pointer;
+  transition: 200ms;
+}
+.new {
+  background-color: rgba($color: #5992c8, $alpha: 1);
+  color: white;
+  border-radius: 20px;
+  border-style: none;
+  padding: 3px 15px 3px 15px;
+  margin-left: 40px;
+  margin-top: 20px;
+
+  cursor: pointer;
+  transition: 200ms;
+}
+.popular:hover {
+  transform: scale(1.1);
+}
+.new:hover {
+  transform: scale(1.1);
+}

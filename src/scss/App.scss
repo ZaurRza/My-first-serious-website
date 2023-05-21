@@ -1,0 +1,409 @@
+::-webkit-scrollbar {
+  width: 6px;
+
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #3f6b9f;
+}
+::-webkit-scrollbar-track {
+  transition: 0.2s linear;
+  opacity: 0;
+  border-radius: 5px;
+  background-color: #c8c8eb;
+}
+.navbar {
+  height: 37px;
+  min-width: 100.9%;
+  position: fixed;
+  z-index: 500;
+  background-color: rgba($color: #f0f0f0, $alpha: 1);
+  transform: translate(-10px, -10px);
+  box-shadow: 52px 5px 5px rgba(0, 0, 0, 0.169);
+}
+.leftnavbar {
+  z-index: 200;
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  background-color: rgba($color: #f0f0f0, $alpha: 1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.169);
+  transform: translateX(-10px);
+}
+.gridicon {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 100ms;
+  transform: translateY(-25px);
+  opacity: 1;
+}
+.selectedlg {
+  font-size: 150%;
+  color: rgba($color: #3f6b9f, $alpha: 1);
+  font-weight: 500;
+
+  margin-left: 60px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.search {
+  margin-left: 27%;
+  width: 25%;
+  border-style: groove;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-color: rgba($color: #ffffff, $alpha: 0.8);
+  outline: none;
+  border-radius: 8px;
+  background-color: rgba($color: #fafafa, $alpha: 1);
+}
+.search::placeholder {
+  padding-left: 45%;
+}
+.avatar {
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(-30px);
+  margin-right: 1%;
+}
+.AvatarDelAnim {
+  display: flex;
+  justify-content: flex-end;
+  transform: translate(-188px, 93px);
+  position: relative;
+  z-index: 1000;
+  opacity: 1;
+  animation-name: AvatarAnimDel;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  .avatar.MuiAvatar-root {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+    animation-name: AvatarSizeRed;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes AvatarAnimDel {
+  from {
+    transform: translate(-188px, 93px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 1;
+    margin-right: 1%;
+  }
+}
+
+@keyframes AvatarSizeRed {
+  0% {
+    width: 70px;
+    height: 70px;
+    opacity: 1;
+  }
+  100% {
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+  }
+}
+.AvatarStartAnim {
+  display: flex;
+  justify-content: flex-end;
+  transform: translate(-188px, 93px);
+  position: relative;
+  z-index: 1000;
+  animation-name: AvatarAnimStart;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  .avatar.MuiAvatar-root {
+    width: 32px;
+    height: 32px;
+    animation-name: AvatarSizeInc;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes AvatarAnimStart {
+  0% {
+    margin-right: 1%;
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translate(-188px, 93px);
+  }
+}
+@keyframes AvatarSizeInc {
+  0% {
+    width: 32px;
+    height: 32px;
+  }
+  100% {
+    width: 70px;
+    height: 70px;
+  }
+}
+.AvatarNone {
+  opacity: 0;
+  display: none;
+  visibility: none;
+  transform: translate(-188px, 93px);
+  position: relative;
+  z-index: 1000;
+  .avatar.MuiAvatar-root {
+    width: 70px;
+    height: 70px;
+  }
+}
+.avatar.MuiAvatar-root {
+  width: 32px;
+  height: 32px;
+}
+.selector {
+  z-index: 500;
+  display: block;
+  width: 350px;
+  height: max-content;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  background-color: rgba($color: #f0f0f0, $alpha: 1);
+  position: fixed;
+  transform: translate(-8px, -9px);
+  transition: 300ms;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.169);
+  padding-left: 2%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.hideselector {
+  z-index: 500;
+  position: fixed;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  transform: translate(-200px, -9px);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.gridiconselector {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 100ms;
+  opacity: 1;
+}
+.language {
+  display: grid;
+  justify-self: space-between;
+  padding-top: 4%;
+  cursor: pointer;
+  width: fit-content;
+  transition: 100ms;
+  color: black;
+  text-decoration: none;
+}
+.language2 {
+  display: grid;
+  justify-self: space-between;
+  padding-top: 4%;
+  position: static;
+  cursor: pointer;
+  width: fit-content;
+  transition: 100ms;
+  color: black;
+  text-decoration: none;
+}
+.language:hover {
+  transform: scale(1.1);
+  transition: 100ms;
+}
+.language2:hover {
+  transform: scale(1.1);
+  transition: 100ms;
+}
+.languagediv {
+  transform: translate(60%, -1600%);
+}
+
+.profilebar {
+  z-index: 200;
+  padding-top: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.539);
+  overflow: auto;
+  width: 250px;
+  height: 100%;
+  margin-top: 28px;
+  padding-right: 30px;
+  margin-right: -6px;
+  background-color: rgba($color: #f0f0f0, $alpha: 1);
+  position: fixed;
+  transition: 500ms;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.prof {
+  display: flex;
+  justify-content: right;
+}
+.ProfileStartAnim {
+  z-index: 200;
+  padding-top: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.539);
+  overflow: auto;
+  width: 250px;
+  height: 100%;
+  margin-top: 26px;
+  padding-right: 30px;
+  margin-right: -6px;
+  background-color: rgba($color: #f0f0f0, $alpha: 1);
+  position: fixed;
+  transition: 500ms;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.ProfileDelAnim {
+  z-index: 200;
+  width: 250px;
+  height: 0;
+  opacity: 0;
+  overflow: auto;
+  visibility: hidden;
+  position: fixed;
+  transition: 300ms;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.hideprofilebar {
+  z-index: 200;
+  width: 250px;
+  height: 0;
+  opacity: 0;
+  overflow: auto;
+  visibility: hidden;
+  position: fixed;
+  transition: 300ms;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.hideprofileav {
+  opacity: 0;
+  margin: 20px;
+}
+.profileavatar {
+  margin: 20px;
+
+  opacity: 1;
+}
+
+.lock {
+  display: none;
+}
+.showlock {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: #052543d3;
+}
+.name {
+  transform: translateY(-85px);
+  font-size: 18px;
+  position: absolute;
+  margin-left: 110px;
+}
+.email {
+  transform: translateY(-62px);
+  font-size: 12px;
+  position: absolute;
+  margin-left: 110px;
+}
+.logout {
+  background-color: rgba($color: #5992c8, $alpha: 1);
+  color: white;
+  border-style: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  margin-left: 190px;
+  transform: translateY(-36px);
+  cursor: pointer;
+}
+.login {
+  background-color: rgba($color: #5992c8, $alpha: 1);
+  color: white;
+  border-style: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-left: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.reg {
+  background-color: rgba($color: #5992c8, $alpha: 1);
+  color: white;
+  border-style: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.settings {
+  margin: 5px 5px 0px 20px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  width: 220px;
+  height: 250px;
+  background-color: rgba($color: #eeeded, $alpha: 1);
+}
+.article {
+  padding-bottom: 10px;
+  margin: 5px 5px 0px 20px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  width: 220px;
+  height: fit-content;
+  background-color: rgba($color: #eeeded, $alpha: 1);
+}
+.createarticle {
+  background-color: #3f6b9f;
+  color: white;
+  border-style: none;
+  border-radius: 12px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 42px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.statistic {
+  margin: 5px 5px 0px 20px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  width: 210px;
+  height: 180px;
+  background-color: rgba($color: #eeeded, $alpha: 1);
+  padding-left: 10px;
+  font-weight: 500;
+  scale: 400px;
+}

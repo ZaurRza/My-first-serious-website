@@ -1,0 +1,32 @@
+.historydivarticles {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  width: 12.5rem;
+  transition: 200ms;
+  cursor: pointer;
+}
+.historydivarticles:hover {
+  scale: 1.07;
+  transition: 200ms;
+}
+.historyarticlesitem {
+  border-radius: 5px;
+  width: 12.5rem;
+  height: 7rem;
+}
+.historyarticlesimg {
+  border-radius: 5px;
+  width: 12.5rem;
+  height: 7rem;
+  object-fit: cover;
+}
+.historyhidearticle {
+  display: none;
+}
+.margin {
+  margin-bottom: 60px;
+}
